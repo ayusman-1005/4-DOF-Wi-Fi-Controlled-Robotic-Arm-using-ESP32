@@ -1,3 +1,7 @@
+//This is the custom OTA header file made to clean the program and help push updates wirelessly without the need of connecting physically every time. 
+
+
+
 // OTAHelper.h
 #ifndef OTA_HELPER_H
 #define OTA_HELPER_H
