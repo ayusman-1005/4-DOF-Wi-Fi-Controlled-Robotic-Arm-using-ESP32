@@ -20,13 +20,3 @@ WORKING: The python script sends data through socket, ESP32 decodes the data and
          ESP32 Servo library and PWM outputs.
 
 NOTE* :The ESP32 code also includes an LEDC-based method for controlling the servos. However, this approach currently does not work on ESP32 (the issue is still unresolved). Instead, the code uses the ESP32Servo library for reliable servo control. The LEDC sections are commented out and can be ignored.
-
-Structure:
-├── Gallery
-    ├── RoboARMimage.jpg
-    ├── RoboArming2.jpg
-    └── info.txt
-├── Microcontroller code
-├── Python code
-├── README.md
-└── otahelper.h.ino
