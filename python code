@@ -1,36 +1,13 @@
-import requests
-import time
+import socket
 
-esp_ip = "http://192.168.76.25"  # Replace with your ESP32's IP
+server_ip = "10.24.169.25"  
+port = 3333
 
-def read_angle():
-    try:
-        response = requests.get(f"{esp_ip}/read")
-        data = response.json()
-        print("Current Angle:", data["angle"])
-    except Exception as e:
-        print("Read error:", e)
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((server_ip, port))
 
-def write_angle(angle):
-    try:
-        response = requests.get(f"{esp_ip}/write", params={"angle": angle})
-        print("Write response:", response.text)
-    except Exception as e:
-        print("Write error:", e)
+s.sendall(b"50,35,75\n")  
+print(s.recv(1024).decode())  
 
-# Example usage
-read_angle()
-angle=0
-while True:
-     
-    write_angle(angle)
-    angle=angle+20
-    time.sleep(0.1)
-    
+s.close()
 
-    if angle==180:
-        angle=0
-#write_angle(180)
-read_angle()
-# write_angle()
-# read_angle()
