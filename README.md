@@ -1,5 +1,5 @@
 This is a 4 degree of freedom robotic arm;  made with the ESP32.
-The components required are:
+Components used:
  1-ESP32, 2-servo motor(3x), 3-Stepper motor, 4-breadboard, 5-jumper wires
 
 Material:Cardboard, Hotglue 
