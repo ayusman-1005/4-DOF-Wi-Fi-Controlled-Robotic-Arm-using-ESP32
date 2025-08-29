@@ -1,4 +1,4 @@
-//This is the custom OTA header file made to clean the program and help push updates wirelessly without the need of connecting physically every time. 
+//This is the custom OTA header file made to keep the main program clean. 
 
 
 
